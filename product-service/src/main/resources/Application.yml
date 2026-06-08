@@ -1,0 +1,30 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: product-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/product_db
+    username: root
+    password: alpha
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    com.ecommerce.product_service: DEBUG
+    org.hibernate.SQL: DEBUG
+
+jwt:
+  secret-key: 1234567890123456789012345678901234567890
